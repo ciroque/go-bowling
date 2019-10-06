@@ -1,7 +1,7 @@
 package bowling
 
 type Bowling struct {
-
+	score int
 }
 
 func NewBowling() Bowling {
@@ -9,9 +9,9 @@ func NewBowling() Bowling {
 }
 
 func (b *Bowling) Throw(pins int) {
-
+	b.score = b.score + pins
 }
 
 func (b *Bowling) GetScore() int {
-	return -1
+	return b.score
 }
